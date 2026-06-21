@@ -1,7 +1,7 @@
-// Get DOM element selections
+// Grab our icon element
 const projectIcon = document.getElementById('icon-project');
 
-// Open the live Streamlit app in a brand new browser tab cleanly
+// Open the live Streamlit app cleanly in a brand new tab
 projectIcon.addEventListener('click', () => {
     window.open('https://jiann1-ai-video-planner.streamlit.app', '_blank');
 });
@@ -13,8 +13,8 @@ function updateClock() {
     let hours = now.getHours();
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12 || 12; // Convert to 12-hour format
+    hours = hours % 12 || 12;
     clockElement.textContent = `${hours}:${minutes} ${ampm}`;
 }
 setInterval(updateClock, 1000);
-updateClock(); // Run instantly on load
+updateClock();
