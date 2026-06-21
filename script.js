@@ -1,16 +1,9 @@
 // Get DOM element selections
 const projectIcon = document.getElementById('icon-project');
-const projectWindow = document.getElementById('window-project');
-const closeProjectBtn = document.getElementById('close-project');
 
-// Open window when shortcut icon is clicked
+// Open the live Streamlit app in a brand new browser tab cleanly
 projectIcon.addEventListener('click', () => {
-    projectWindow.style.display = 'flex';
-});
-
-// Close window when 'X' button is clicked
-closeProjectBtn.addEventListener('click', () => {
-    projectWindow.style.display = 'none';
+    window.open('https://jiann1-ai-video-planner.streamlit.app', '_blank');
 });
 
 // Dynamic System Clock
