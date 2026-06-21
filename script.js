@@ -1,12 +1,25 @@
-// Grab our icon element
+// Grab Desktop Elements
 const projectIcon = document.getElementById('icon-project');
+const aboutIcon = document.getElementById('icon-about');
+const aboutWindow = document.getElementById('window-about');
+const closeAboutBtn = document.getElementById('close-about');
 
-// Open the true live Streamlit app cleanly in a brand new tab
+// 1. Project Shortcut -> Opens your live streamlit app in a clean tab
 projectIcon.addEventListener('click', () => {
     window.open('https://ai-video-planner-fym7wjdiceubukaaatbkuc.streamlit.app/', '_blank');
 });
 
-// Dynamic System Clock
+// 2. About Me Shortcut -> Opens the retro pop-up container
+aboutIcon.addEventListener('click', () => {
+    aboutWindow.style.display = 'flex';
+});
+
+// 3. Close Button -> Hides the pop-up window panel
+closeAboutBtn.addEventListener('click', () => {
+    aboutWindow.style.display = 'none';
+});
+
+// Dynamic Taskbar System Clock
 function updateClock() {
     const clockElement = document.getElementById('clock');
     const now = new Date();
@@ -18,4 +31,3 @@ function updateClock() {
 }
 setInterval(updateClock, 1000);
 updateClock();
-
