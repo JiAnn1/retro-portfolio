@@ -1,9 +1,9 @@
 // Grab our icon element
 const projectIcon = document.getElementById('icon-project');
 
-// Open the live Streamlit app cleanly in a brand new tab
+// Open the true live Streamlit app cleanly in a brand new tab
 projectIcon.addEventListener('click', () => {
-    window.open('https://jiann1-ai-video-planner.streamlit.app', '_blank');
+    window.open('https://ai-video-planner-fym7wjdiceubukaaatbkuc.streamlit.app/', '_blank');
 });
 
 // Dynamic System Clock
@@ -18,3 +18,4 @@ function updateClock() {
 }
 setInterval(updateClock, 1000);
 updateClock();
+
